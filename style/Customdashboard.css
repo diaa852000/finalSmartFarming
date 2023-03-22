@@ -1,0 +1,99 @@
+*{
+    padding: 0 !important;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    border-radius: 0%;
+}
+#main-body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.main-nav{
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    height: 53px;
+}
+.sub-nav{
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    height: 53px;
+}
+.nav-side{
+    background-color: green;
+    transition: 1s ease-in-out;
+    width: 60px;
+    transition: 250ms ease-in-out;
+}
+.nav-list .data-items{
+    width: 100%;
+}
+.shrink-li{
+    width:100%;
+    padding-left: 15px !important;
+}
+.nav-list li i{
+    font-size: 20px;
+}
+.shrink{    
+    width: 250px;
+}
+.show-name{
+    display: none;
+}
+.main-container{
+    height: 100%;
+}
+.logo{
+    background-color: green;
+}
+.left-text{
+    text-align: left !important;
+}
+@media (max-width:500px) {
+    .nav-side{
+        transition: 250ms ease-in-out;
+        width: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .nav-side li.hasabalah{
+        color: red;
+        text-align: center !important;
+    }
+    #hide-sm-name{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .show-sm{
+        opacity: 1;
+        pointer-events: all;
+        width: 50px;
+        display: flex !important;
+    }
+}
+

@@ -1,63 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-}
-
-
-#dashboard {
-    width: 100%;
-    height: 100%;
-    background-color: #d3d3d3;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container-tap {
-    padding-left: calc(var(--nav-width) + 1rem);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: green;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.path-tap {
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0px 20px;
-}
-
-[data-path] {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    padding: 8px;
-}
-
-[data-path]:hover {
-    color: rgba(0, 0, 0, 0.43);
-}
-
-span {
-    color: rgba(0, 0, 0, 0.5);
-    padding: 0px 10px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-li {
-    list-style: none;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 :root {
@@ -239,21 +179,4 @@ a {
     .body-pd {
         padding-left: calc(var(--nav-width) + 188px)
     }
-}
-.current-page{
-     width: 100%;
-     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 20px;
-    padding: 20px;
-    background-color:#d3d3d3;
-}
-body{
-    background-color: #d3d3d3;
-}
-.card{
-    background-color: #fff;
-    /* width: 200px;
-    height: 300px; */
 }
