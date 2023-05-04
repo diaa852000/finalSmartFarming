@@ -1,0 +1,114 @@
+/* general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+/* start */
+.card{
+    width: 28rem;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+}
+
+    .card .notfication.new-notfication #recently{
+        display: block;
+    }
+    .card .notfication.new-notfication .list-group-item{
+        background-color: rgba(0,0,0,.21);
+    }
+
+        .card .card-header i{
+            color: goldenrod;
+            margin-right: 5px;
+        }
+
+        .card .card-header span{
+            font-weight: 700;
+        }
+
+        .card div.name{
+            font-weight: 600;
+        }
+
+        .card ul span{
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .card .options div{
+            cursor: pointer;
+            padding: 6px 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }    
+
+        .card .options div:hover{
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        .card .notfication{
+            position: relative;
+        }
+
+        .card .list-group-item{
+            border: none;
+            cursor: pointer;
+            margin-top: 8px;
+            border-radius: 6px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            padding: 0;
+        }
+
+        .card .list-group-item:hover{
+            background-color: rgba(0, 0, 0, 0.13);
+        }
+
+            .card .icon {
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                padding: 0;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 2.5rem;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            .card .icon #delete{
+                display: none;
+            }
+
+            .card .notfication:hover #delete{
+                margin-top: 5px;
+                display: block;
+                padding: 0;
+            }
+
+            .card  #recently{
+                display: none;
+                color: #0078d4 ;
+                padding-top:1px;
+                font-size: 9px;
+            }
+
+
+            .card .icon:hover{
+                background-color:rgba(0, 0, 0, 0.15);
+                box-shadow: rgba(0, 0, 0, 0.36) 0px 1px 4px;
+            } 

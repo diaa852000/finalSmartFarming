@@ -145,7 +145,6 @@ a {
     pointer-events: all !important;
 }
 .dropdown-list{
-    transition:0.3s ease-in-out;
     position: absolute;
     top: 50px;
     right: 40px;

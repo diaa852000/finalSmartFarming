@@ -1,53 +1,57 @@
-let toggleBtn = document.querySelector('#toggle-btn');
-let navSide = document.querySelector('.nav-side');
-let navTxt = document.querySelectorAll('.data-items');
-let  pagesLis = document.querySelectorAll('.pages li');
-let logout = document.querySelector('.logout');
-
-// toggleBtn.addEventListener('click',()=>{
-//     navSide.classList.toggle('shrink') 
-//     pagesLis.forEach((li)=>{
-//         li.classList.toggle('shrink-li');
-//         li.classList.toggle('left-text');
-//     })
-//     logout.classList.toggle('logout')
-//     navTxt.forEach((txt)=>{
-//         txt.classList.toggle('hide-name')
-//     })
-//     if(window.innerWidth <= 500){
-//         navSide.classList.toggle('show-sm')
-//     }
-// })
+const toggleBtn = document.querySelector('#toggle-btn');
+const navSide = document.querySelector('#nav-side');
+const navTxt = document.querySelectorAll('.data-name');
+const  pagesLis = document.querySelectorAll('.pages .nav-li');
+const pageLayer = document.querySelector('.page-layer');
+const body = document.querySelector('body');
 
 
 
-toggleBtn.onclick = ()=>{
-    navSide.classList.toggle('shrink') 
-    pagesLis.forEach((li)=>{
+function showNav(){
+    if(window.innerWidth <= 600){
+        pageLayer.classList.toggle('shadow')
+        body.classList.toggle('no-scroll');
+    }
+
+    navSide.classList.toggle('expand');
+    
+    let isOpend = navSide.classList.contains('expand');
+    toggleBtn.classList = isOpend ? "fa-solid fa-angles-left" : "fa-solid fa-bars";
+
+    pagesLis.forEach(function(li){
         li.classList.toggle('shrink-li');
         li.classList.toggle('left-text');
-    })
-    logout.classList.toggle('logout')
-    navTxt.forEach((txt)=>{
-        txt.classList.toggle('hide-name')
-    })
-    if(window.innerWidth <= 500){
-        navSide.classList.toggle('show-sm')
-    }
+    }) 
+    
+    navTxt.forEach(function(txt){
+        txt.classList.toggle('hide-name');
+    })  
 }
 
-// pagesLis.forEach((li)=>{
-//     li.addEventListener('click', (e)=>{
-//         pagesLis.forEach((li)=>{
-//             li.classList.remove('active');
-//         })
-//         e.currentTarget.classList.add('active')
-//     })
-// })
+function removeNav(){
+    if(window.innerWidth <= 600){
+        pageLayer.classList.toggle('shadow')
+        body.classList.toggle('no-scroll');
+    }
 
-pagesLis.forEach((li)=>{
-    li.onclick = function() {
-        pagesLis.forEach((li)=>{
+    navSide.classList.toggle('expand')
+    
+    let isOpend = navSide.classList.contains('expand');
+    toggleBtn.classList = isOpend ? "fa-solid fa-angles-left" : "fa-solid fa-bars";
+
+    pagesLis.forEach(function(li){
+        li.classList.toggle('shrink-li');
+        li.classList.toggle('left-text');
+    }) 
+
+    navTxt.forEach(function(txt){
+        txt.classList.toggle('hide-name');
+    })  
+}
+
+pagesLis.forEach(function(li){
+    li.onclick = function(){
+        pagesLis.forEach(function(li){
             li.classList.remove('active');
         })
         this.classList.add('active');
