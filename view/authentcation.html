@@ -15,7 +15,21 @@
 </head>
 
 <body>
-    <div class="container-fluid d-flex justify-content-center align-items-center h-100">
+    <div class="area">
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
+    <div class="container-fluid d-flex justify-content-center align-items-center h-100 position-absolute top-0">
         <div class="auth-container d-flex justify-content-center align-items-stretch" id="main">
             <div class="sign-up d-flex flex-column justify-content-center align-items-center w-50">
                 <form action="#" class="w-100">
@@ -31,6 +45,7 @@
                     <input type="password" name="password" placeholder="Password" required />
                     <button type="submit">Sign Up</button>
                 </form>
+                <i class="fa-solid fa-arrow-left back-signin"></i>
             </div>
             <div class="sign-in d-flex flex-column justify-content-center align-items-center w-50">
                 <form action="#" class="w-100">
@@ -45,6 +60,7 @@
                     <input type="password" name="password" placeholder="Password" required />
                     <a href="#" class="forget-pass">Forget your password?</a>
                     <button type="submit">Sign In</button>
+                    <p class="txt-sm-signup">if you dosen't have <a href="#">Sign up</a></p>
                 </form>
             </div>
             <div class="overlay-container">
