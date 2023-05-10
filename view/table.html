@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="../style/table.css">
+
+    <script defer src="../js/table.js"></script>
+</head>
+<body>
+    <div class="table-container h-100 d-flex justify-content-center align-items-center">
+        <div class="table-comp p-2">
+            <h3 class="table-name">Crop Table</h3>
+            
+            <div class="table-comp-header px-1">
+                <div class="table-header-cell">Crop</div>
+                <div class="table-header-cell">Variety/hybrid</div>
+                <div class="table-header-cell">Planting date</div>
+                <div class="table-header-cell">Harvest date</div>
+                <div class="table-header-cell">Average yield</div>
+            </div>
+
+            <div class="table-comp-body d-flex flex-lg-column flex-wrap justify-content-start align-items-center gap-2">
+                <h6 class="season-date w-100 pt-1 pb-2 px-1">season 2023 jan 1-Dec 31,2023</h6>
+                <div class="record" id="record">
+                    <div class="table-body-cell "> 
+                        <form action="#" class="w-100 h-100 select">
+                            <select class="h-100 w-100" name="crop" id="crop">
+                                <option value="lemon">lemon</option>
+                                <option value="orange">orange</option>
+                                <option value="apple">apple</option>
+                                <option value="watermelon">watermelon</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="table-body-cell">
+                        <form action="#" class="w-100 h-100">
+                            <input type="text" disabled placeholder="Not Selected" class="w-100 h-100"/>
+                        </form>
+                    </div> 
+                    <div class="table-body-cell">
+                        <form action="#" class="w-100 h-100 select">
+                            <input type="date" class="w-100 h-100"/>
+                        </form>
+                    </div>
+                    <div class="table-body-cell">
+                        <form action="#" class="w-100 h-100 select">
+                            <input type="date" class="w-100 h-100"/>
+                        </form>
+                    </div>
+                    <div class="table-body-cell">                      
+                        <form action="#" class="w-100 h-100 select">
+                            <select name="areas" id="areas" class="w-100 h-100 px-2">
+                                <option value="t/ha">t/ha</option>
+                                <option value="q/ha">q/ha</option>
+                                <option value="kg/ha">kg/ha</option>
+                            </select>   
+                        </form>
+                    </div>
+                    <div class="table-body-cell actions d-flex justify-content-start align-items-center gap-1">
+                        <a href="#" class="btn btn-outline-secondary add-record" id="add-record" onclick="AddRecord()">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-danger delete-record" id="delete-record">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
