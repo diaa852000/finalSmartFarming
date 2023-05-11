@@ -51,174 +51,195 @@ ul{
         font-size: 14px;
         font-weight: bold;
     }
+    .field-info .area-size{
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.65);
+    }
         .field-info button i{
             font-size: 13px;
         }
-
-/* .table-container{
-    border:1px  solid #333;
-}
-.crop-table{
-    width: 100%;
-    border-collapse: collapse;
-}
-    .crop-table thead{
-
-    }
-        .crop-table thead tr th{
-            padding: 5px;
-            text-align: center;
-        }
-    .crop-table thead tr td{
-        font-size: 14px;
-        font-weight: medium;
-        letter-spacing: 0.35px;
-        color: #fff;
-        vertical-align: top;
-        border:1px solid #dee2de68;
-    }
-    .crop-table tbody tr td{
-        font-size: 14px;
-        letter-spacing: 0.35px;
-        font-weight: normal;
-        color: #f1f1f1;
-        text-align: center;
-        border: 1px solid #dee2de68;
-    }
-    .crop-table tbody tr td form{
-        width: 100%;
-        padding: 0;
-    }
-
-    .crop-table tbody tr td form select{
-        padding: 10px 20px;
-        height: 100%;
-        border: none;
-        outline: none;
-        font-size: 18px;
-        background-color: #f6f5f7;
-        }
-
-    .crop-table tbody tr td form input{
-        padding: 10px;
-    }
-    .crop-table tbody tr td form input[type="date"]{
-        background-color: #f6f5f7;
-        border: none;
-        outline: none;
-    }
-    input[type="date"]::-webkit-calendar-picker-indicator{
-        cursor: pointer;
-    }
-    
-
-@media screen and (max-width:900px){
-    .crop-table{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width:550px){
-    .crop-table{
-        display: flex;
-        flex-direction: column;
-    }
-} */
-
-
-.crop-table .records{
-
-}
-
-.crop-table .crop-table-header{
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-
-}
-    .crop-table .crop-table-header li{
-        display: inline-block;
-        color: rgba(0,0,0,0.6);
-        font-size: 16px;
-        font-weight: 700;
-    }
-
-    .crop-table .season{
-        font-size: 14px;
-        text-transform: capitalize;
-        font-weight: 500;
-        color: rgba(0,0,0,0.4);
-    } 
-    
-    .crop-table form .select-div{
-        position: relative;
-        display: inline-block;
-        border-radius: 5px;
-    }
-
-    .crop-table form select{
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        background-color: rgba(0,0,0,0.08);
-        border-radius: 5px;
-        font-size: 18px;
-        color: rgba(0,0,0,0.88);
-        font-weight: 500;
-        -moz-appearance:none; 
-        -webkit-appearance:none; 
-        appearance:none
-    }
-
-    .crop-table form .select-div::after{
-        pointer-events: none;
-        cursor: pointer;
-        content: '';
-        position: absolute;
-        top: 60%;
-        transform: translateY(-50%);
-        right: 18px;
-        border: 4px solid;
-        border-color:  rgba(0,0,0,0.8) transparent transparent  transparent;
-    }
-
-    .crop-table form select option{
-        border: none;
-    }
-
-    .crop-table form input{
-        position: relative;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        background-color: rgba(0,0,0,0.08);
-        border-radius:5px;
-        padding: 8px 10px;
-        font-size: 16px;
-        color: rgba(0,0,0,0.88);
-        font-weight: 500;
-    }
-
-        .crop-table form input[type="text"]{
-            border: 1px solid rgba(0,0,0,0.3);
-            background-color: rgba(0,0,0,0.05);
-        } 
-
-
-        input[type="date"]::-webkit-calendar-picker-indicator{
-            cursor: pointer;
-            opacity: 0;
+        .table-container{
+            height: 100%;
         }
         
-        input[type="date"]::after{
-            content: '';
-            position: absolute;
-            top: 55%;
-            transform: translateY(-50%);
-            right: 18px;
-            border: 4px solid;
-            border-color:  rgba(0,0,0,0.8) transparent transparent  transparent;
-            pointer-events: none;
+        .table-comp{
+            border-radius: 8px;
         }
+            .table-comp .table-comp-header{
+                display: grid;
+                grid-template-columns: repeat(4,minmax(100px, 200px))  repeat(2, auto);
+                gap: 10px;
+            }
+                
+                .table-comp .table-comp-header {
+                    padding: 10px 0px;
+                }
+                    .table-comp-header .table-header-cell{
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: rgba(0, 0, 0, 0.65);
+                    }
+        
+                    .table-comp-saeson-record .season-date{
+                        color: rgba(0, 0, 0, 0.15);
+                        font-size: 18px;
+                        font-weight: bold;
+        
+                    }
+        
+                    .table-comp .table-comp-body .record{
+                        display: grid;
+                        grid-template-columns: repeat(4,minmax(100px, 200px)) 120px repeat(2, auto);
+                        gap: 10px;
+                        width: 100%;
+                    }
+                        .record .table-body-cell select{
+                            border:none;
+                            outline:none;
+                            background-color: #e8ecef;
+                            cursor: pointer;
+                            -moz-appearance:none; 
+                            -webkit-appearance:none; 
+                            appearance:none;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        .select{
+                            position: relative;
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: rgba(0, 0, 0, 0.65);
+                            border-radius: 8px;
+                        }
+                        .record .table-body-cell .select:after{
+                            content: '';
+                            cursor: pointer;
+                            position: absolute;
+                            top: 60%;
+                            transform: translateY(-50%);
+                            right: 15px;
+                            border: 4px solid;
+                            border-color: black transparent transparent transparent;
+                            pointer-events: none;
+                        }
+                        .record .table-body-cell input{
+                            padding: 0 10px;
+                            cursor: pointer;
+                        }
+                        .record .table-body-cell input:not([disabled]){
+                            border:none;
+                            outline:none;
+                            background-color: #e8ecef;
+                        }
+                        input[type="date"]::-webkit-calendar-picker-indicator{
+                            cursor: pointer;
+                            opacity: 0;
+                            margin: 0px -10px;
+                            width: 20%;
+                            height: 100%;
+                        }
 
+/* Here's media querey */
+@media screen and (max-width:1440px) {
+    .record .table-body-cell .select:after{
+        border: 4px solid;
+        border-color: black transparent transparent transparent;
+    }
+}
+ @media screen and (max-width:1200px) {
+    .table-comp .table-comp-header{
+        grid-template-columns: repeat(5,minmax(100px, 163px))  repeat(2, auto);
+    }
+    .table-comp .table-comp-body .record{
+        grid-template-columns: repeat(4,minmax(100px, 200px)) 120px repeat(2, auto);
+    }
+
+    
+    .table-comp-body .table-body-cell, 
+    .table-comp-header .table-header-cell{
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width:990px) {
+    .table-comp .table-comp-header{
+        grid-template-columns: repeat(5,minmax(100px, 110px))  repeat(2, auto);
+    }
+    .table-comp .table-comp-body .record{
+        grid-template-columns: repeat(4,minmax(100px, 130px)) 80px repeat(2, auto);
+    }
+        .record .table-body-cell input[type="date"]{
+            font-size: 14px;
+        }
+}
+
+@media screen and (max-width:769px) {
+    .table-comp .table-comp-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .table-comp .table-comp-header .table-header-cell{
+        padding: 10px;
+    }
+
+    .table-comp .table-comp-body{
+        display: flex;
+        justify-content: stretch !important;
+    }
+    .table-comp .table-comp-body .record{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .field{
+        flex-direction: column;
+    }
+    .field img{
+        width: 100%;
+    }
+    .field-info{
+        width: 100%;
+    }
+
+    .table-comp .table-comp-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .table-comp .table-comp-header .table-header-cell{
+        padding: 1px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .table-comp .table-comp-body{
+        display: flex;
+        justify-content: center !important;
+    }
+        .table-comp .table-comp-body .record{
+            width: 100%;
+        }
+        .table-comp .table-comp-body .record:nth-child(1){
+            width: 100% ;
+        }
+}
+
+@media screen and (max-width:375px) {
+    .table-comp .table-comp-header .table-header-cell{
+        font-size: 11px;
+        padding: 0;
+    }
+}
+@media screen and (max-width:320px) {
+    .table-comp .table-comp-header .table-header-cell{
+        font-size: 9px;
+    }
+}

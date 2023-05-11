@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="../fontawesome-free-6.2.0-web/css/all.css">
     <link rel="stylesheet" href="../style/greenHouse.css">
 
-    <script src="../js/greenHouse.js"></script>
+    <script defer src="../js/greenHouse.js"></script>
 </head>
 
 <body> 
-    <div class="greenhouse-container border container py-5 d-flex flex-column justify-content-center">
+    <div class="greenhouse-container border container py-5 d-flex flex-column justify-content-center gap-2">
         <h3 class="greenhouse-name w-75 p-1">Field Name</h3>
         <div class="field d-flex justify-content-start align-items-stretch gap-3 py-1">
             <img class="img-field" src="../images/greenhouse-model.jpg" alt="not found!" />
@@ -22,59 +22,69 @@
                 <h3 class="pb-2">Field border editing</h3>
                 <p>Edit field border if they've changed. Your changes will be applied to this season only.</p>
                 <button class="btn btn-outline-secondary"><i class="fas fa-pen"></i> Edit boundaries</button>
+                <h6 class="area-size py-2 px-1">Area Size: 13ha</h6>
             </div>
         </div>
 
-        <div class="crop-table py-3 mt-2">
-            <h4 class="pb-2 fw-bold">Crop Table</h4>
-            <ul class="crop-table-header w-100 py-2 d-flex justify-content-start gap-5">
-                <li>Crop Name</li>
-                <li>Variety/hybrid</li>
-                <li>Planting date</li>
-                <li>Harvest date</li>
-                <li>Average area</li>
-            </ul>
-            <p class="season pt-2">season 2023 <span class="dateMonth"></span></p>
-
-            <!-- <div class="recordes d-flex flex-column justify-content-center gap-2">
-                <div class="instance d-flex justify-content-start gap-2">
-                    <form action="#" class="d-flex justify-content-start gap-2">
-                        <div class="select-div">
-                            <select name="crops" id="crops">
-                                <option value="3enba">orange</option>
-                                <option value="3enab">3enab</option>
-                                <option value="applle">applle</option>
+            <div class="table-comp p-2">
+                <h3 class="table-name">Crop Table</h3>
+                
+                <div class="table-comp-header px-1">
+                    <div class="table-header-cell">Crop</div>
+                    <div class="table-header-cell">Variety/hybrid</div>
+                    <div class="table-header-cell">Planting date</div>
+                    <div class="table-header-cell">Harvest date</div>
+                    <div class="table-header-cell">Average yield</div>
+                </div>
+    
+            <div class="table-comp-body d-flex flex-lg-column flex-wrap justify-content-start align-items-center gap-2">
+                <h6 class="season-date w-100 pt-1 pb-2 px-1">season 2023 jan 1-Dec 31,2023</h6>
+                <div class="record" id="record">
+                    <div class="table-body-cell "> 
+                        <form action="#" class="w-100 h-100 select">
+                            <select class="h-100 w-100" name="crop" id="crop">
+                                <option value="lemon">lemon</option>
+                                <option value="orange">orange</option>
+                                <option value="apple">apple</option>
                                 <option value="watermelon">watermelon</option>
                             </select>
-                        </div>
-                        
-                        <input type="text"  disabled placeholder="Not Selected" />
-                        <input type="date" name="planting-date" id="planting-date" />
-                        <input type="date" name="harvest-date" id="harvest-date" />
-        
-                        <div class="select-div area">
-                            <select name="areas" id="areas" class="px-3">
+                        </form>
+                    </div>
+                    <div class="table-body-cell">
+                        <form action="#" class="w-100 h-100">
+                            <input type="text" disabled placeholder="Not Selected" class="w-100 h-100"/>
+                        </form>
+                    </div> 
+                    <div class="table-body-cell">
+                        <form action="#" class="w-100 h-100 select">
+                            <input type="date" class="w-100 h-100"/>
+                        </form>
+                    </div>
+                    <div class="table-body-cell">
+                        <form action="#" class="w-100 h-100 select">
+                            <input type="date" class="w-100 h-100"/>
+                        </form>
+                    </div>
+                    <div class="table-body-cell">                      
+                        <form action="#" class="w-100 h-100 select">
+                            <select name="areas" id="areas" class="w-100 h-100 px-2">
                                 <option value="t/ha">t/ha</option>
-                                <option value="t/ha">q/ha</option>
-                                <option value="t/ha">kg/ha</option>
-                            </select>    
-                        </div>
-                    </form> 
-                    <div class="actions-btns d-flex justify-content-center align-items-center gap-2">
-                        <a class="btn btn-outline-secondary mt-1 add-instance">
+                                <option value="q/ha">q/ha</option>
+                                <option value="kg/ha">kg/ha</option>
+                            </select>   
+                        </form>
+                    </div>
+                    <div class="table-body-cell actions d-flex justify-content-start align-items-center gap-1">
+                        <a href="#" class="btn btn-outline-success add-record" id="add-record" onclick="AddRecord()">
                             <i class="fa-solid fa-plus"></i>
                         </a>
-                        <a class="btn btn-outline-danger mt-1 delete-instance">
+                        <a href="#" class="btn btn-outline-danger delete-record" id="delete-record">
                             <i class="fa-regular fa-trash-can"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div> -->
-
-        
-
-        
+        </div>
     </div>
 </body>
 
